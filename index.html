@@ -15,12 +15,42 @@
     }
     .important-dates li { margin-bottom:0.4rem;}
     footer { margin-top:4rem; padding:2rem 0; background:#f8f9fa;}
+
+    .hero-banner {
+    position: relative;
+    height: 300px; /* 根据图片高度调节 */
+    background-image: url('images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+  }
+
+  .hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    filter: blur(6px) brightness(0.5); /* 虚化并稍微变暗以突出文字 */
+    z-index: 1;
+  }
+
+  .banner-text {
+    position: relative;
+    z-index: 2;
+  }
   </style>
 </head>
 <body>
-  <header class="header text-center p-0">
-    <img src="images/banner.jpg" alt="SICI 2025 Banner" class="img-fluid w-100" style="max-height:400px; object-fit: cover;">
+  <header class="hero-banner text-center text-white d-flex align-items-center justify-content-center">
+    <div class="banner-text container">
+      <h1 class="display-6 fw-bold">
+        1st International Workshop on Service Intelligence for Collaborative Industry
+      </h1>
+    </div>
   </header>
+
 
 
   <main class="container">
